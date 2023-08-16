@@ -1,14 +1,14 @@
 from setuptools import find_packages, setup
 
-with open("lib/Readme.md", "r") as f:
+with open("src/Readme.md", "r") as f:
     long_description = f.read()
 
 setup(
     name="ln.py.core",
     version="1.0.2",
-    description="Core Python Library",
-    package_dir={"": "lib"},
-    packages=find_packages(where="lib"),
+    description="Lernender Corp Core Python Library",
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/github-lernender-corp/ln.py.core",
