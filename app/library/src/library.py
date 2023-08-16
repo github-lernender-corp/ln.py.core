@@ -5,7 +5,7 @@ by developers into a common library.
 import uuid
 
 def guid() -> str:
-    """create_guid
+    """guid
     This function creates a standard guid
     Returns:
         str: Guid
@@ -14,3 +14,13 @@ def guid() -> str:
     _guid = _guid.upper()
     return _guid
     
+def isNull(o) -> bool:
+    """isNull
+    Test if a string is null or not
+    Returns:
+        str: Guid
+    """
+    if "".__eq__(o):
+        True
+    
+    return _guid    
