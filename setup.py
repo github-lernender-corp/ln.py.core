@@ -5,7 +5,7 @@ with open("lib/Readme.md", "r") as f:
 
 setup(
     name="ln.py.core",
-    version="1.0.3",
+    version="1.0.2",
     description="Core Python Library",
     package_dir={"": "lib"},
     packages=find_packages(where="lib"),
