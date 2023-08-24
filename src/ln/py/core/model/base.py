@@ -1,11 +1,13 @@
-from library import guid
 
+from library import guid, repr_toString
+
+@repr_toString
 class Base:  
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
     
     def __init__(self, 
-                 id: int, 
+                 id: int = None, 
                  name: str = str(), 
                  description: str = str(), 
                  label: str = str(), 
@@ -20,8 +22,5 @@ class Base:
         self.active = active
         self.disabled = disabled
         self.hidden = hidden
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
 
 __all__ = ["Base"]

@@ -5,7 +5,7 @@ with open("src/Readme.md", "r") as f:
 
 setup(
     name="ln.py.core",
-    version="1.0.3",
+    version="1.0.4",
     description="Lernender Corp Core Python Library",
     package_dir={"": "src"},
     packages=find_packages(where="src"),

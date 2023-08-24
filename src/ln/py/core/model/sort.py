@@ -1,7 +1,8 @@
-from library import guid
+from library import guid, repr_toString
 from constant.enum import Direction
 from . import Base
 
+@repr_toString
 class Sort(Base):  
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
@@ -10,9 +11,6 @@ class Sort(Base):
                  dir: Direction = Direction.Ascending):
         self._id = guid()
         self.dir = dir
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
 
     def isUndefined(self):
         return self.dir == Direction.Undefined

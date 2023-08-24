@@ -1,13 +1,14 @@
-from library import guid
+from library import guid, repr_toString
 from constant.enum import Title
 from . import Base
 
+@repr_toString
 class Name(Base):  
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
     
     def __init__(self, 
-                 title: Title, 
+                 title: Title = Title.Mr, 
                  first: str = str(),
                  middle: str = str(),
                  last: str = str()):
@@ -16,8 +17,5 @@ class Name(Base):
         self.first = first
         self.middle = middle
         self.last = last
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
 
 __all__ = ["Name"]

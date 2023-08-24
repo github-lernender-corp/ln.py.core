@@ -30,3 +30,6 @@ from .index import (
     isTrue,
     isTuple,
 )
+from .repr import (
+    repr_toString
+)

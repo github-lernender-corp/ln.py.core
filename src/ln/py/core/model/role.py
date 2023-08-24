@@ -1,6 +1,7 @@
-from library import guid
+from library import guid, repr_toString
 from . import Base
 
+@repr_toString
 class Role(Base):  
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
@@ -9,8 +10,5 @@ class Role(Base):
                  name: str = str()):
         self._id = guid()
         self.name = name
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
 
 __all__ = ["Role"]
