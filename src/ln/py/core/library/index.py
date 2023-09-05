@@ -5,6 +5,8 @@ by developers into a common library.
 import uuid
 import numpy as np
 import datetime
+import secrets
+import string
 
 def guid() -> str:
     """guid
@@ -229,10 +231,7 @@ def init(o: object, prop: str, value = None):
     return's an object's property or default variable
     returns any
     """      
-    if (hasProperty(o, prop)):
-        getProperty(o, prop)
-        
-    return value 
+    return getProperty(o, prop) if hasProperty(o, prop) else value
 
 def isDate(o) -> bool:
     """isDate
@@ -249,3 +248,22 @@ def isTime(o) -> bool:
     bool
     """      
     return not isNone(o) and isinstance(o, datetime.time)
+
+
+def generate_password(length: int, uppercase: bool = False, symbol: bool = True) -> str:
+    comb = string.ascii_lowercase = string.digits
+    
+    if symbol:
+        comb += string.punctuation
+    
+    if uppercase:
+        comb += string.ascii_uppercase
+        
+    comb_length = len(comb)
+    password = ""
+    
+    for _ in range(length):
+        password += comb[secrets.randbelow(comb_length)]
+    
+    return password
+

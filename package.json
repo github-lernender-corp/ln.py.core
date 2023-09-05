@@ -1,0 +1,19 @@
+{
+  "name": "ln.py.core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "src": "src",
+    "scripts": "scripts"
+  },
+  "scripts": {
+    "build": "python3 setup.py bdist_wheel sdist",
+    "build:check": "twine check dist/*",
+    "pip:install": "pip3 install .",
+    "pip:uninstall": "pip3 uninstall ln.py.core"
+  },
+  "author": "",
+  "license": "ISC"
+}

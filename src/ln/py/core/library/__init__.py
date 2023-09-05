@@ -1,4 +1,5 @@
 from .index import (
+    generate_password,
     getProperty,
     guid,
     hasLength,
